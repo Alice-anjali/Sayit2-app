@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var User = require('../models/user');
-/* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
 
 router.post('/signup', function(req, res, next) {
   User.findOne({email : req.body.email}, function(err,user){
@@ -15,7 +11,6 @@ router.post('/signup', function(req, res, next) {
   else{
     if (user){
     console.log("User already present!");
-    console.log("user = "+ user);
     }
     else{
       if(req.body.password1 == req.body.password2){
@@ -41,7 +36,28 @@ router.post('/signup', function(req, res, next) {
     }
   }
 });
+});
 
+router.post('/login',function(req,res,next){
+  User.findOne({username : req.body.login_username, password : req.body.login_password},function(err,user_data){
+    if(err){
+      res.redirect('/logout');
+    }
+    else{
+      if(user_data){
+        req.session.user_session = 'Baadshahmercy'
+        res.render('dashboard',{userdata : user_data});
+      }
+      else{
+        res.redirect('/');
+      }
+    }
+  });
+});
+
+router.get('/logout', function(req,res,next){
+  req.session.user_session = null;
+  res.redirect('/');
 });
 
 module.exports = router;

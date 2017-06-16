@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Tera Mann</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h4>SIGNUP</h4>
     <form action="/users/signup" method="post">
       Email: <input type="text" name="email">
       Name: <input type="text" name="name">
       Username: <input type="text" name="username">
       Password: <input type="password" name="password1">
-      Password: <input type="password" name="password2">
+      Confirm Password: <input type="password" name="password2">
      <input type="submit">
     </form>
+    <br>
+    <h4>LOGIN</h4>
+    <form action="/users/login" method="post">
+      Username : <input type="text" name="login_username">
+      Password : <input type="text" name="login_password">
+      <input type="submit">
+    </form>
   </body>
+  <script>
+
+  </script>
 </html>
