@@ -3,9 +3,85 @@
   <head>
     <title>Tera Mann</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
-    <h4>SIGNUP</h4>
+  <body style="background-color:#CC0066">
+    <!-- <a class="waves-effect btn modal-trigger" data-target="signup_modal" style="background-color:#ffffff;margin-left:39%;"><font color="#CC0066">SIGNUP</font></a> -->
+    <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+    <button id="return_btn" class="btn btn-success" data-toggle="modal" data-target="#modal1">Return</button></td>
+    <a id="login_btn" class="waves-effect btn" onclick="login_card" data-toggle="modal" data-target="#user_login" style="background-color:#ffffff;margin-left:2%;";><font color="#CC0066">LOGIN</font></a>
+
+    <!-- Signup Modal Structure -->
+    <!-- <div id="signup_modal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+      </div>
+    </div> -->
+
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-foote fade">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+
+    <div class="container" style="margin-top:2%;">
+		<div class="row">
+			<div class="col s12 m6 offset-m3">
+		<div class="card-panel z-depth-5">
+		<h4 class="center">Signup Here</h4>
+      <div class="row">
+        <form class="col s12 m12">
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <!-- <i class="mdi-action-account-circle prefix"></i> -->
+              <i class="small material-icons dp48 prefix">person_pin</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Username</label>
+            </div>
+
+            <div class="input-field col s12 m12">
+              <!-- <i class="mdi-communication-email prefix"></i> -->
+              <i class="small material-icons dp48 prefix">email</i>
+              <input id="icon_email" type="email" class="validate">
+              <label for="icon_email">Your Email</label>
+            </div>
+
+              <div class="input-field col s12 m12">
+              <!-- <i class="fa fa-unlock-alt prefix"></i> -->
+                <i class="small material-icons dp48 prefix">lock_open</i>
+              <input id="icon_password" type="password" class="validate">
+              <label for="icon_password">Password</label>
+            </div>
+
+            <div class="input-field col s12 m12">
+            <!-- <i class="fa fa-unlock-alt prefix"></i> -->
+              <i class="small material-icons dp48 prefix">lock_open</i>
+            <input id="icon_password" type="password" class="validate">
+            <label for="icon_password">Confirm Password</label>
+          </div>
+          </div>
+        </form>
+      </div>
+ <button class="btn waves-effect waves-light center" style="background-color:#CC0066;" type="submit" name="action">Sign Up
+    <i class="fa fa-sign-in right"></i>
+  </button>
+</div>
+</div>
+  </div>
+	</div>
+
+
+    <!-- <h4>SIGNUP</h4>
     <form action="/users/signup" method="post">
       Email: <input type="text" name="email">
       Name: <input type="text" name="name">
@@ -20,9 +96,14 @@
       Username : <input type="text" name="login_username">
       Password : <input type="text" name="login_password">
       <input type="submit">
-    </form>
+    </form> -->
   </body>
-  <script>
-
-  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+   <script>
+    //  $('#signup_modal').modal('show');
+  //   $(document).ready(function() {
+  //     $('#modal1').modal('show');
+  //  });
+      $('#modal1').modal('show');
+   </script>
 </html>
