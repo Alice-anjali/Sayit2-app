@@ -27,6 +27,7 @@ router.post('/signup', function(req, res, next) {
           }
           else{
             console.log("New User created");
+            res.redirect('/');
           }
         });
       }
