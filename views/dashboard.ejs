@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Tera Mann</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-       <h1>Welcome <%= userdata.name %> </h1>
-       <a style="float:center" class="navbar-brand" href="/users/logout">Logout</a>
+    <div class="container-fluid" style="background-color:#e0e0e0">
+        <nav style="background-color:#CC0066">
+           <div class="nav-wrapper" style="margin-left:1%">
+              <a class="brand-logo">Dashboard</a>
+              <a href="/users/logout" style="float:right;margin-right:1%">Logout</a>
+           </div>
+        </nav>
+      </div>
+
+       <h1>Welcome <%= userdata.name %></h1>
+
   </body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script>
 
   </script>

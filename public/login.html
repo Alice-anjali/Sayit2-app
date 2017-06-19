@@ -1,119 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tera Mann</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body style="background-color:#CC0066">
-     <a class="btn waves-effect waves-light center" style="background-color:#ffffff;" href="#signup_modal"><font color="#CC0066">Sign Up</font></a>
-
-     <!-- Signup modal -->
-         <div id="signup_modal" class="modal" style="width:40%;">
-           <div class="modal-content">
-             <h4 class="center">Signup here!</h4>
-             <form action="/users/signup" method="post">
+   <head>
+      <title>Tera Mann</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body style="background-color:#CC0066">
+      <a class="btn waves-effect waves-light center" style="background-color:#ffffff;margin-left:3%;margin-top:4%" href="#signup_modal"><font color="#CC0066">Sign Up</font></a>
+      <!-- Signup modal -->
+      <div id="signup_modal" class="modal" style="width:40%;">
+         <div class="modal-content">
+            <h4 class="center">Signup here!</h4>
+            <form action="/users/signup" method="post">
                <div class="row">
-                 <div class="input-field col s12 m12">
-                   <!-- <i class="mdi-action-account-circle prefix"></i> -->
-                   <i class="small material-icons dp48 prefix">person_pin</i>
-                   <input id="icon_prefix" type="text" name="name">
-                   <label for="icon_prefix">Name</label>
-                 </div>
-
-                 <div class="input-field col s12 m12">
-                   <!-- <i class="mdi-communication-email prefix"></i> -->
-                   <i class="small material-icons dp48 prefix">email</i>
-                   <input id="icon_email" type="email" name="email">
-                   <label for="icon_email">Your Email</label>
-                 </div>
-
-                 <div class="input-field col s12 m12">
-                   <!-- <i class="mdi-action-account-circle prefix"></i> -->
-                   <i class="small material-icons dp48 prefix">person_pin</i>
-                   <input id="icon_prefix" type="text" name="username">
-                   <label for="icon_prefix">Username</label>
-                 </div>
-
-                   <div class="input-field col s12 m12">
-                   <!-- <i class="fa fa-unlock-alt prefix"></i> -->
+                  <div class="input-field col s12 m12">
+                     <i class="small material-icons dp48 prefix">person_pin</i>
+                     <input id="icon_prefix" type="text" name="name">
+                     <label for="icon_prefix">Name</label>
+                  </div>
+                  <div class="input-field col s12 m12">
+                     <i class="small material-icons dp48 prefix">email</i>
+                     <input id="icon_email" type="email" name="email">
+                     <label for="icon_email">Your Email</label>
+                  </div>
+                  <div class="input-field col s12 m12">
+                     <i class="small material-icons dp48 prefix">person_pin</i>
+                     <input id="icon_prefix" type="text" name="username">
+                     <label for="icon_prefix">Username</label>
+                  </div>
+                  <div class="input-field col s12 m12">
                      <i class="small material-icons dp48 prefix">lock_open</i>
-                   <input id="icon_password" type="password" name="password1">
-                   <label for="icon_password">Password</label>
-                 </div>
-
-                 <div class="input-field col s12 m12">
-                 <!-- <i class="fa fa-unlock-alt prefix"></i> -->
-                   <i class="small material-icons dp48 prefix">lock_open</i>
-                 <input id="icon_password" type="password" name="password2">
-                 <label for="icon_password">Confirm Password</label>
+                     <input id="icon_password" type="password" name="password1">
+                     <label for="icon_password">Password</label>
+                  </div>
+                  <div class="input-field col s12 m12">
+                     <i class="small material-icons dp48 prefix">lock_open</i>
+                     <input id="icon_password" type="password" name="password2">
+                     <label for="icon_password">Confirm Password</label>
+                  </div>
                </div>
-               </div>
-           </div>
-           <button class="btn waves-effect waves-light center" style="background-color:#CC0066;margin-left:5%;;margin-bottom:5%" type="submit">Sign Up
-              <i class="fa fa-paper-plane"></i>
-            </button>
-           </form>
          </div>
-
-    <!-- Login card -->
-    <div class="container" style="margin-top:2%;">
-		<div class="row">
-			<div class="col s12 m6 offset-m3">
-		<div class="card-panel z-depth-5">
-		<h4 class="center">Login here!</h4>
-      <div class="row">
-        <form class="col s12 m12" action="/users/login" method="post">
-          <div class="row">
-            <div class="input-field col s12 m12">
-              <!-- <i class="mdi-action-account-circle prefix"></i> -->
-              <i class="small material-icons dp48 prefix">person_pin</i>
-              <input id="icon_prefix" type="text" name="login_username">
-              <label for="icon_prefix">Username</label>
-            </div>
-
-              <div class="input-field col s12 m12">
-              <!-- <i class="fa fa-unlock-alt prefix"></i> -->
-                <i class="small material-icons dp48 prefix">lock_open</i>
-              <input id="icon_password" type="password" name="login_password">
-              <label for="icon_password">Password</label>
-            </div>
-          </div>
+         <button class="btn waves-effect waves-light center" style="background-color:#CC0066;margin-left:5%;;margin-bottom:5%" type="submit">Sign Up
+         <i class="fa fa-paper-plane"></i>
+         </button>
+         </form>
       </div>
-      <button class="btn waves-effect waves-light center" style="background-color:#CC0066;" type="submit">Login
-        <i class="fa fa-sign-in right"></i>
-      </button>
-    </form>
-</div>
-</div>
-  </div>
-	</div>
-
-
-    <!-- <h4>SIGNUP</h4>
-    <form action="/users/signup" method="post">
-      Email: <input type="text" name="email">
-      Name: <input type="text" name="name">
-      Username: <input type="text" name="username">
-      Password: <input type="password" name="password1">
-      Confirm Password: <input type="password" name="password2">
-     <input type="submit">
-    </form>
-    <br>
-    <h4>LOGIN</h4>
-    <form action="/users/login" method="post">
-      Username : <input type="text" name="login_username">
-      Password : <input type="text" name="login_password">
-      <input type="submit">
-    </form> -->
-  </body>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!-- Login card -->
+      <div class="container" style="margin-top:2%;">
+         <div class="row">
+            <div class="col s12 m6 offset-m3">
+               <div class="card-panel z-depth-5">
+                  <h4 class="center">Login here!</h4>
+                  <div class="row">
+                     <form class="col s12 m12" action="/users/login" method="post">
+                        <div class="row">
+                           <div class="input-field col s12 m12">
+                              <i class="small material-icons dp48 prefix">person_pin</i>
+                              <input id="icon_prefix" type="text" name="login_username">
+                              <label for="icon_prefix">Username</label>
+                           </div>
+                           <div class="input-field col s12 m12">
+                              <i class="small material-icons dp48 prefix">lock_open</i>
+                              <input id="icon_password" type="password" name="login_password">
+                              <label for="icon_password">Password</label>
+                           </div>
+                        </div>
+                  </div>
+                  <button class="btn waves-effect waves-light center" style="background-color:#CC0066;" type="submit">Login
+                  <i class="fa fa-sign-in right"></i>
+                  </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
    <script>
-   $(document).ready(function(){
-    $('#signup_modal').modal();
-    });
+      $(document).ready(function(){
+       $('#signup_modal').modal();
+       });
    </script>
 </html>
