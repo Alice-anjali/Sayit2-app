@@ -46,8 +46,12 @@ router.post('/login',function(req,res,next){
     }
     else{
       if(user_data){
-        req.session.user_session = 'Baadshahmercy'
-        res.render('dashboard',{userdata : user_data});
+        req.session.user_session = 'Baadshahmercy';
+
+        req.session.dashboard = {
+            usedata : user_data ,
+        };
+        res.redirect('/dashboard');
       }
       else{
         res.redirect('/');
