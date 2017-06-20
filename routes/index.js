@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var User = require('../models/user');
 
 var loggedincheck = function(req,res,next){
   if(req.session){
@@ -23,8 +24,15 @@ router.get('/', function(req, res, next) {
 
 router.get('/dashboard', loggedincheck, function(req,res,next){
   if (req.session.dashboard) {
-      var result = req.session.dashboard.usedata;
+    User.findOne({email : req.session.dashboard.usedata},function(err,result){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log("result = "+result);
       res.render('dashboard',{userdata : result});
+      }
+    });
   }
   else {
     console.log("Not working");

@@ -47,9 +47,8 @@ router.post('/login',function(req,res,next){
     else{
       if(user_data){
         req.session.user_session = 'Baadshahmercy';
-
         req.session.dashboard = {
-            usedata : user_data ,
+            usedata : user_data.email
         };
         res.redirect('/dashboard');
       }
