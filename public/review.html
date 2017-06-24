@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Tera Mann</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body style="background-color:#CC0066">
+      <!-- Feedback modal -->
+      <div id="feedback_modal" class="modal" style="width:30%;">
+         <div class="modal-content">
+            <h4 class="center">Thank You!</h4>
+            <p class="center">Your response has been submitted.</p>
+          </div>
+      </div>
+      <!-- Login card -->
+      <div class="container" style="margin-top:8%;width:100%">
+         <div class="row">
+            <div class="col s12 m6 offset-m3">
+               <div class="card-panel z-depth-5">
+                  <h4 class="center">Give your feedback here!</h4>
+                  <div class="row">
+                     <form class="col s12 m12" action="" method="post">
+                        <div class="row">
+                           <div class="input-field col s12 m12">
+                              <i class="small material-icons dp48 prefix">person_pin</i>
+                              <input id="icon_prefix" type="text" name="login_username">
+                              <label for="icon_prefix">Name(optional)</label>
+                           </div>
+                           <div class="input-field col s12 m12">
+                              <i class="small material-icons dp48 prefix">email</i>
+                              <input id="icon_password" type="text" name="login_password">
+                              <label for="icon_password">Feedback</label>
+                           </div>
+                        </div>
+                  </div>
+                    <a class="btn waves-effect waves-light center" style="background-color:#CC0066;margin-left:3%;margin-top:4%" href="#feedback_modal"><font color="#ffffff">Submit</font><i class="fa fa-sign-in right"></i></a>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+   <script>
+      $(document).ready(function(){
+       $('#feedback_modal').modal();
+       });
+   </script>
+</html>
