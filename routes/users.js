@@ -19,7 +19,8 @@ router.post('/signup', function(req, res, next) {
           email : req.body.email,
           name : req.body.name,
           username : req.body.username,
-          password : req.body.password1
+          password : req.body.password1,
+          review : {msg : "Just checking at 0"}
         });
         newUser.save(function(err){
           if (err){
