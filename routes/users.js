@@ -43,6 +43,7 @@ router.post('/signup', function(req, res, next) {
               }
               else{
                 console.log("password doesnt match");
+                  res.redirect('/?error=103');
               }
             }
           }
