@@ -11,6 +11,7 @@ router.post('/signup', function(req, res, next) {
   else{
     if (user_email){
     console.log("Email ID already in use!");
+    res.redirect('/?error=101');
     }
     else{
         User.findOne({username : req.body.username}, function(err,user_name){
@@ -20,6 +21,7 @@ router.post('/signup', function(req, res, next) {
           else{
             if (user_name){
             console.log("Username already taken!");
+            res.redirect('/?error=102');
             }
             else {
               if(req.body.password1 == req.body.password2){

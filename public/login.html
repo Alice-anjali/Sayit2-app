@@ -83,5 +83,17 @@
       $(document).ready(function(){
        $('#signup_modal').modal();
        });
+
+       var get_error = location.search.split('error=')[1]
+       if(get_error){
+        console.log(get_error);
+        if(get_error==101){
+          console.log("email used");
+        }
+        else{
+          console.log("username used");
+        }
+      }
+
    </script>
 </html>
