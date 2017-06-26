@@ -86,12 +86,11 @@
 
        var get_error = location.search.split('error=')[1]
        if(get_error){
-        console.log(get_error);
         if(get_error==101){
-          console.log("email used");
+          Materialize.toast('Email ID already in use!', 4000)
         }
         else{
-          console.log("username used");
+          Materialize.toast('Username already taken!', 4000)
         }
       }
 

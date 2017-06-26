@@ -29,7 +29,6 @@ router.get('/dashboard', loggedincheck, function(req,res,next){
       console.log(err);
     }
     else{
-      console.log("result = "+result);
       res.render('dashboard',{userdata : result});
       }
     });

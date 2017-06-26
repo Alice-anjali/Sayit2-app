@@ -10,7 +10,6 @@ router.post('/signup', function(req, res, next) {
   }
   else{
     if (user_email){
-    console.log("Email ID already in use!");
     res.redirect('/?error=101');
     }
     else{
@@ -20,7 +19,6 @@ router.post('/signup', function(req, res, next) {
           }
           else{
             if (user_name){
-            console.log("Username already taken!");
             res.redirect('/?error=102');
             }
             else {
