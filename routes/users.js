@@ -20,10 +20,6 @@ router.post('/signup', function(req, res, next) {
           else{
             if (user_name){
             console.log("Username already taken!");
-            // res.redirect('/');
-            // res.status(100).json({ error: 'message' });
-            // res.status(500).send({ error: "username already taken" });
-            //  Materialize.toast('I am a toast!', 4000)
             }
             else {
               if(req.body.password1 == req.body.password2){
